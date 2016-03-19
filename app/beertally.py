@@ -3,6 +3,8 @@ import sys
 from PySide import QtGui, QtCore
 import db
 import os
+from model.model import *
+from db import sessionScope
 
 from view.mainWindow import MainWindow
 import inspect, os
