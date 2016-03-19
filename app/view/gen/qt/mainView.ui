@@ -33,14 +33,14 @@
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
          <item row="4" column="8">
-          <widget class="QLabel" name="label_19">
+          <widget class="QLabel" name="lTotalTallies12">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="4" column="9">
-          <widget class="QLabel" name="label_20">
+          <widget class="QLabel" name="lCurrentTallies12">
            <property name="text">
             <string>0</string>
            </property>
@@ -53,6 +53,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -67,6 +70,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -80,27 +86,30 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="6" column="2">
-          <widget class="QLabel" name="label_13">
+          <widget class="QLabel" name="lTotalTallies7">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="6" column="3">
-          <widget class="QLabel" name="label_14">
+          <widget class="QLabel" name="lCurrentTallies7">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="1" column="2">
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="lTotalTallies2">
            <property name="text">
             <string>0</string>
            </property>
@@ -113,6 +122,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -133,6 +145,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -145,6 +160,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -181,6 +199,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -194,6 +215,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -206,6 +230,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -226,6 +253,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -239,104 +269,107 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="2" column="12">
-          <widget class="QLabel" name="label_33">
+          <widget class="QLabel" name="lTotalTallies17">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="2" column="13">
-          <widget class="QLabel" name="label_34">
+          <widget class="QLabel" name="lCurrentTallies17">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="4" column="12">
-          <widget class="QLabel" name="label_37">
+          <widget class="QLabel" name="lTotalTallies19">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="4" column="13">
-          <widget class="QLabel" name="label_38">
+          <widget class="QLabel" name="lCurrentTallies19">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="1" column="13">
-          <widget class="QLabel" name="label_32">
+          <widget class="QLabel" name="lCurrentTallies16">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="3" column="12">
-          <widget class="QLabel" name="label_35">
+          <widget class="QLabel" name="lTotalTallies18">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="1" column="12">
-          <widget class="QLabel" name="label_31">
+          <widget class="QLabel" name="lTotalTallies16">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="0" column="12">
-          <widget class="QLabel" name="label_30">
+          <widget class="QLabel" name="lTotalTallies15">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="0" column="3">
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="lCurrentTallies1">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="0" column="9">
-          <widget class="QLabel" name="label_28">
+          <widget class="QLabel" name="lCurrentTallies8">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="2" column="8">
-          <widget class="QLabel" name="label_23">
+          <widget class="QLabel" name="lTotalTallies10">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="2">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="lTotalTallies6">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="3">
-          <widget class="QLabel" name="label_12">
+          <widget class="QLabel" name="lCurrentTallies6">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="4" column="2">
-          <widget class="QLabel" name="label_9">
+          <widget class="QLabel" name="lTotalTallies5">
            <property name="text">
             <string>0</string>
            </property>
@@ -350,48 +383,51 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="3" column="9">
-          <widget class="QLabel" name="label_22">
+          <widget class="QLabel" name="lCurrentTallies11">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="3" column="8">
-          <widget class="QLabel" name="label_21">
+          <widget class="QLabel" name="lTotalTallies11">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="4" column="3">
-          <widget class="QLabel" name="label_10">
+          <widget class="QLabel" name="lCurrentTallies5">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="8">
-          <widget class="QLabel" name="label_17">
+          <widget class="QLabel" name="lTotalTallies13">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="9">
-          <widget class="QLabel" name="label_18">
+          <widget class="QLabel" name="lCurrentTallies13">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="0" column="2">
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="lTotalTallies1">
            <property name="text">
             <string>0</string>
            </property>
@@ -405,20 +441,23 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="1" column="8">
-          <widget class="QLabel" name="label_25">
+          <widget class="QLabel" name="lTotalTallies9">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="2" column="9">
-          <widget class="QLabel" name="label_24">
+          <widget class="QLabel" name="lCurrentTallies10">
            <property name="text">
             <string>0</string>
            </property>
@@ -432,34 +471,37 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="3" column="2">
-          <widget class="QLabel" name="label_7">
+          <widget class="QLabel" name="lTotalTallies4">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="lTotalTallies3">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="lCurrentTallies3">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="3" column="3">
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="lCurrentTallies4">
            <property name="text">
             <string>0</string>
            </property>
@@ -472,6 +514,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -486,6 +531,9 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
@@ -498,6 +546,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -512,20 +563,23 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="0" column="8">
-          <widget class="QLabel" name="label_27">
+          <widget class="QLabel" name="lTotalTallies8">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="1" column="9">
-          <widget class="QLabel" name="label_26">
+          <widget class="QLabel" name="lCurrentTallies9">
            <property name="text">
             <string>0</string>
            </property>
@@ -538,6 +592,9 @@
              <width>100</width>
              <height>100</height>
             </size>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
             <string>PushButton</string>
@@ -552,27 +609,30 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="6" column="9">
-          <widget class="QLabel" name="label_15">
+          <widget class="QLabel" name="lCurrentTallies14">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="6" column="8">
-          <widget class="QLabel" name="label_16">
+          <widget class="QLabel" name="lTotalTallies14">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="1" column="3">
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="lCurrentTallies2">
            <property name="text">
             <string>0</string>
            </property>
@@ -586,48 +646,51 @@
              <height>100</height>
             </size>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
             <string>PushButton</string>
            </property>
           </widget>
          </item>
          <item row="0" column="13">
-          <widget class="QLabel" name="label_29">
+          <widget class="QLabel" name="lCurrentTallies15">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="12">
-          <widget class="QLabel" name="label_39">
+          <widget class="QLabel" name="lTotalTallies20">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="5" column="13">
-          <widget class="QLabel" name="label_40">
+          <widget class="QLabel" name="lCurrentTallies20">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="3" column="13">
-          <widget class="QLabel" name="label_36">
+          <widget class="QLabel" name="lCurrentTallies18">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="6" column="12">
-          <widget class="QLabel" name="label_41">
+          <widget class="QLabel" name="lTotalTallies21">
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
          <item row="6" column="13">
-          <widget class="QLabel" name="label_42">
+          <widget class="QLabel" name="lCurrentTallies21">
            <property name="text">
             <string>0</string>
            </property>
@@ -691,6 +754,9 @@
              <verstretch>4</verstretch>
             </sizepolicy>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
           </widget>
          </item>
          <item>
@@ -701,8 +767,11 @@
              <verstretch>1</verstretch>
             </sizepolicy>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Turven</string>
            </property>
           </widget>
          </item>
@@ -714,8 +783,11 @@
              <verstretch>1</verstretch>
             </sizepolicy>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Opties</string>
            </property>
           </widget>
          </item>
@@ -727,8 +799,11 @@
              <verstretch>1</verstretch>
             </sizepolicy>
            </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
            <property name="text">
-            <string>PushButton</string>
+            <string>Annuleren</string>
            </property>
           </widget>
          </item>
