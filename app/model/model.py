@@ -17,6 +17,12 @@ class BaseMixin(object):
 
 Base = declarative_base(cls=BaseMixin)
 
+
+tallyTypeList = Table('TallyTypeList', Base.metadata,
+    Column('listId', Integer, ForeignKey('List.id')),
+    Column('tallyTypeId', Integer, ForeignKey('TallyType.id'))
+)
+
 class Room(Base):
     """
     Stores which rooms are occupied by which member. 
@@ -25,7 +31,7 @@ class Room(Base):
 
     # one-to-one
     member = relationship('Member',
-        uselist = 'False',
+        uselist = False,
         backref = 'room'
     )
 
@@ -39,21 +45,39 @@ class List(Base):
     # one-to-many
     tallies = relationship('Tally', backref = 'list')
 
+    # many-to-many
+    tallyTypes = relationship('TallyType', secondary = tallyTypeList)
+
+
+class TallyType(Base):
+    "Tally types to differentiate from the standard beer tallies"
+
+    label = Column(String, nullable = False)
+
+    # one-to-many
+    tallies = relationship('Tally', backref = 'tallyType')
+
 
 class Tally(Base):
     "The tallies, coupled to a List."
 
     memberId = Column(Integer, ForeignKey('Member.id'), nullable = False)
     listId = Column(Integer, ForeignKey('List.id'), nullable = False)
+    tallyTypeId = Column(Integer, ForeignKey('TallyType.id'), nullable = False)
 
-    def __init__(self, member, session):
-        # Temporarily disable auto flush, so we can get the latest list
+    def __init__(self, member, session, tallyType = None):
+        # Temporarily disable auto flush, so we can get the latest list and tally type
         session.autoflush = False
 
         self.member = member
         self.list = session.query(List).order_by(desc(List.id)).first()
+        if tallyType == None:
+            tallyType = 'Beer'
+            
+        self.tallyType = session.query(TallyType).filter_by(label = tallyType).first()
 
         session.autoflush = True
+
 
 
 class Member(Base):
