@@ -1,5 +1,6 @@
 import signal
 import sys
+import qdarkstyle
 from PySide import QtGui, QtCore
 import db
 import os
@@ -37,6 +38,7 @@ if __name__ == '__main__':
     app = BeerTally(sys.argv)   
     app.mainWindow.show();
 
+    app.setStyleSheet(qdarkstyle.load_stylesheet())
     app.mainWindow.setWindowFlags(QtCore.Qt.FramelessWindowHint)
     app.mainWindow.showFullScreen()
 
