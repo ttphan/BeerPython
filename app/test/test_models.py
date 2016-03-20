@@ -5,6 +5,7 @@ from model import model
 from model.model import *
 from db import Session, sessionScope
 from sqlalchemy.exc import IntegrityError
+import bcrypt
 import pdb
 
 import inspect, os
@@ -184,3 +185,13 @@ class TestRoom:
         assert testMember2.room == None
         assert testRoom3.member == None
         assert db_session.query(Member).filter(Member.room != None).count() == 1
+
+class testPassword:
+    def test_password_verification(self, db_session):
+        db_session.add(Password('foo'))
+        db_session.commit()
+
+        hashed = db_session.query(Password).one().password
+
+        assert bcrypt.hashpw('foo', hashed) == hashed
+        assert bcrypt.hashpw('bar', hashed) != hashed

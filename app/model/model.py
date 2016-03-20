@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship, backref, scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base, declared_attr
 from datetime import datetime
 from sqlalchemy import func
+import bcrypt
 import pdb
 
 class BaseMixin(object):
@@ -22,6 +23,13 @@ tallyTypeList = Table('TallyTypeList', Base.metadata,
     Column('listId', Integer, ForeignKey('List.id')),
     Column('tallyTypeId', Integer, ForeignKey('TallyType.id'))
 )
+
+class Password(Base):
+    password = Column(String)
+
+    def __init__(self, plaintext):
+        self.password = bcrypt.hashpw(plaintext.encode('utf-8'), bcrypt.gensalt())
+    
 
 class Room(Base):
     """

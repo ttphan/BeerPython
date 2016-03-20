@@ -825,8 +825,7 @@
 background-attachment: fixed;
 background-color: white;
 color: red;
-font-size: 14pt;
-</string>
+font-size: 14pt;</string>
            </property>
           </widget>
          </item>

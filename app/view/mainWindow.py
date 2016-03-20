@@ -2,9 +2,11 @@ from PySide import QtCore, QtGui
 from PySide.QtCore import *
 from PySide.QtGui import *
 from view.gen.mainView import Ui_MainWindow 
+from view.otherViews import LoginView, MenuView
 from model.model import *
 from db import sessionScope
 import view.gen.resources_rc
+from datetime import datetime
 
 class MainWindow(QMainWindow, Ui_MainWindow):
 
@@ -43,6 +45,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         self.btConfirmTallies.clicked.connect(self.confirmTallies)
         self.btCancelTallies.clicked.connect(self.refresh)
+        self.btMenu.clicked.connect(self.showLoginDialog)
 
 
     def initializeValues(self):
@@ -98,8 +101,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 currentTallies = int(value[2].text())
 
                 if currentTallies > 0:
+                    time = datetime.now().strftime('%H:%M:%S')
                     member.addTally(session, currentTallies)
-                    self.tLog.append(member.name + " heeft " + str(currentTallies) + " biertje(s) geturfd.")
+                    self.tLog.append(time + " - " + member.name + " heeft " 
+                        + str(currentTallies) + " biertje(s) geturfd.")
+                    if currentTallies == 7:
+                        self.tLog.append("Waarvoor hulde!")
                     
                     
         self.refresh()
+
+
+    def showLoginDialog(self):
+        with sessionScope() as session:
+            loginDialog = LoginView(session)
+            ret = loginDialog.exec_()
+
+            if ret:
+                self.showMenuDialog(session)
+
+    def showMenuDialog(self, session):
+        menuDialog = MenuView(session)
+        menuDialog.showFullScreen()
+        menuDialog.exec_()
