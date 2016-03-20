@@ -76,16 +76,39 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def refresh(self):
         with sessionScope() as session:
             members = session.query(Member).filter(Member.room != None)
+            tallies = []
+
             for member in members:
                 id = member.room.id
                 totalTallies = member.getTotalTallies(session)
+                tallies.append([id, totalTallies])
 
                 self.rooms[id][0].setText(member.name)
+                self.rooms[id][0].setStyleSheet('border: 1px solid #4A4949;')
                 self.rooms[id][0].setEnabled(True)
                 self.rooms[id][1].setText(str(totalTallies))
                 self.rooms[id][2].setText('0')
                 self.rooms[id][2].setStyleSheet("color: white; font-size: 9pt;")
 
+
+            # Rank the top 3 members
+            rankColour = ['gold', 'silver', '#693316']
+            for rank in range(3):
+                # Get all maximums
+                top = maxes(tallies)
+
+                # Don't rank if there are no tallies
+                if top[0] > 0:
+                    for room in top[1]:
+                        # Give every ranked member an appropriate border color
+                        self.rooms[room[0]][0].setStyleSheet('border: 3px outset ' 
+                            + rankColour[rank] + ';')
+
+                    # Filter out the top ranked to calculate the next maximums
+                    tallies = [t for t in tallies if not any(t == x for x in top[1])]
+                else:
+                    break;
+        
 
     def addTally(self, id):
         oldValue = int(self.rooms[id][2].text())
@@ -124,3 +147,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         menuDialog = MenuView(session)
         menuDialog.showFullScreen()
         menuDialog.exec_()
+
+        self.refresh()
+
+
+
+"""
+Helper functions
+"""
+def maxes(array):
+    "Get all maximums instead of just one"
+    key = lambda x: x[1]
+
+    m, max_list = key(array[0]), []
+    for s in array:
+        k = key(s)
+        if k > m:
+            m, max_list = k, [s]
+        elif k == m:
+            max_list.append(s)
+    return m, max_list
