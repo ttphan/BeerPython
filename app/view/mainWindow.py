@@ -78,13 +78,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 totalTallies = member.getTotalTallies(session)
 
                 self.rooms[id][0].setText(member.name)
+                self.rooms[id][0].setEnabled(True)
                 self.rooms[id][1].setText(str(totalTallies))
                 self.rooms[id][2].setText('0')
+                self.rooms[id][2].setStyleSheet("color: white; font-size: 9pt;")
 
 
     def addTally(self, id):
         oldValue = int(self.rooms[id][2].text())
         self.rooms[id][2].setText(str(oldValue + 1))
+        self.rooms[id][2].setStyleSheet("color: green; font-size: 18pt;")
 
 
     def confirmTallies(self):
@@ -96,5 +99,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
                 if currentTallies > 0:
                     member.addTally(session, currentTallies)
-
+                    self.tLog.append(member.name + " heeft " + str(currentTallies) + " biertje(s) geturfd.")
+                    
+                    
         self.refresh()

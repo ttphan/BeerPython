@@ -95,3 +95,4 @@ db.sqlite
 # ui2py files
 app/view/gen/*.py
 app/view/gen/qt/*.ui.autosave
+app/view/gen/qt/qt.*

@@ -48,6 +48,9 @@
          </item>
          <item row="1" column="6">
           <widget class="QPushButton" name="btMember9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -58,12 +61,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="4" column="0">
           <widget class="QPushButton" name="btMember5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -74,12 +80,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
           <widget class="QPushButton" name="btMember3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -90,7 +99,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -117,6 +126,9 @@
          </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="btMember2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -127,12 +139,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="0" column="10">
           <widget class="QPushButton" name="btMember15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -149,12 +164,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="5" column="0">
           <widget class="QPushButton" name="btMember6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -165,7 +183,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -187,6 +205,9 @@
          </item>
          <item row="0" column="0">
           <widget class="QPushButton" name="btMember1">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -203,12 +224,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="1" column="10">
           <widget class="QPushButton" name="btMember16">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -219,12 +243,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="6" column="0">
           <widget class="QPushButton" name="btMember7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -235,12 +262,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="0" column="6">
           <widget class="QPushButton" name="btMember8">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -257,12 +287,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="5" column="6">
           <widget class="QPushButton" name="btMember13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -273,7 +306,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -377,6 +410,9 @@
          </item>
          <item row="6" column="6">
           <widget class="QPushButton" name="btMember14">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -387,7 +423,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -435,6 +471,9 @@
          </item>
          <item row="3" column="10">
           <widget class="QPushButton" name="btMember18">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -445,7 +484,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -465,6 +504,9 @@
          </item>
          <item row="2" column="10">
           <widget class="QPushButton" name="btMember17">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -475,7 +517,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -509,6 +551,9 @@
          </item>
          <item row="3" column="0">
           <widget class="QPushButton" name="btMember4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -519,12 +564,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="5" column="10">
           <widget class="QPushButton" name="btMember20">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -535,12 +583,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="6" column="10">
           <widget class="QPushButton" name="btMember21">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -551,12 +602,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="4" column="10">
           <widget class="QPushButton" name="btMember19">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -567,7 +621,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -587,6 +641,9 @@
          </item>
          <item row="2" column="6">
           <widget class="QPushButton" name="btMember10">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -597,12 +654,15 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item row="3" column="6">
           <widget class="QPushButton" name="btMember11">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -613,7 +673,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -640,6 +700,9 @@
          </item>
          <item row="4" column="6">
           <widget class="QPushButton" name="btMember12">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -650,7 +713,7 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="text">
-            <string>PushButton</string>
+            <string/>
            </property>
           </widget>
          </item>
@@ -758,8 +821,11 @@
             <enum>Qt::NoFocus</enum>
            </property>
            <property name="styleSheet">
-            <string notr="true">background: url(:/img/huislogo.jpg) no-repeat center center fixed;
+            <string notr="true">background: url(:/img/huislogo.jpg) no-repeat center center;
+background-attachment: fixed;
 background-color: white;
+color: red;
+font-size: 14pt;
 </string>
            </property>
           </widget>
