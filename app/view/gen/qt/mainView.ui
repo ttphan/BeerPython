@@ -32,21 +32,37 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="4" column="8">
-          <widget class="QLabel" name="lTotalTallies12">
-           <property name="text">
-            <string>0</string>
+         <item row="2" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
           </widget>
          </item>
-         <item row="4" column="9">
-          <widget class="QLabel" name="lCurrentTallies12">
-           <property name="text">
-            <string>0</string>
+         <item row="4" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies12">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
           </widget>
          </item>
-         <item row="1" column="6">
+         <item row="0" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies1">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
           <widget class="QPushButton" name="btMember9">
            <property name="enabled">
             <bool>false</bool>
@@ -103,27 +119,6 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="2">
-          <widget class="QLabel" name="lTotalTallies7">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="3">
-          <widget class="QLabel" name="lCurrentTallies7">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QLabel" name="lTotalTallies2">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QPushButton" name="btMember2">
            <property name="enabled">
@@ -143,7 +138,7 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="10">
+         <item row="0" column="9">
           <widget class="QPushButton" name="btMember15">
            <property name="enabled">
             <bool>false</bool>
@@ -187,21 +182,24 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="7">
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+         <item row="6" column="0">
+          <widget class="QPushButton" name="btMember7">
+           <property name="enabled">
+            <bool>false</bool>
            </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Minimum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
+           <property name="minimumSize">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>100</width>
+             <height>100</height>
             </size>
            </property>
-          </spacer>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </item>
          <item row="0" column="0">
           <widget class="QPushButton" name="btMember1">
@@ -228,7 +226,7 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="10">
+         <item row="1" column="9">
           <widget class="QPushButton" name="btMember16">
            <property name="enabled">
             <bool>false</bool>
@@ -247,8 +245,8 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QPushButton" name="btMember7">
+         <item row="5" column="5">
+          <widget class="QPushButton" name="btMember13">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -266,7 +264,7 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="6">
+         <item row="0" column="5">
           <widget class="QPushButton" name="btMember8">
            <property name="enabled">
             <bool>false</bool>
@@ -291,124 +289,7 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="6">
-          <widget class="QPushButton" name="btMember13">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>100</height>
-            </size>
-           </property>
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="12">
-          <widget class="QLabel" name="lTotalTallies17">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="13">
-          <widget class="QLabel" name="lCurrentTallies17">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="12">
-          <widget class="QLabel" name="lTotalTallies19">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="13">
-          <widget class="QLabel" name="lCurrentTallies19">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="13">
-          <widget class="QLabel" name="lCurrentTallies16">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="12">
-          <widget class="QLabel" name="lTotalTallies18">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="12">
-          <widget class="QLabel" name="lTotalTallies16">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="12">
-          <widget class="QLabel" name="lTotalTallies15">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="lCurrentTallies1">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="9">
-          <widget class="QLabel" name="lCurrentTallies8">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="8">
-          <widget class="QLabel" name="lTotalTallies10">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="2">
-          <widget class="QLabel" name="lTotalTallies6">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3">
-          <widget class="QLabel" name="lCurrentTallies6">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="2">
-          <widget class="QLabel" name="lTotalTallies5">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="6">
+         <item row="6" column="5">
           <widget class="QPushButton" name="btMember14">
            <property name="enabled">
             <bool>false</bool>
@@ -428,48 +309,6 @@
           </widget>
          </item>
          <item row="3" column="9">
-          <widget class="QLabel" name="lCurrentTallies11">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="8">
-          <widget class="QLabel" name="lTotalTallies11">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="3">
-          <widget class="QLabel" name="lCurrentTallies5">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="8">
-          <widget class="QLabel" name="lTotalTallies13">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="9">
-          <widget class="QLabel" name="lCurrentTallies13">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QLabel" name="lTotalTallies1">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="10">
           <widget class="QPushButton" name="btMember18">
            <property name="enabled">
             <bool>false</bool>
@@ -488,21 +327,7 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="8">
-          <widget class="QLabel" name="lTotalTallies9">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="9">
-          <widget class="QLabel" name="lCurrentTallies10">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="10">
           <widget class="QPushButton" name="btMember17">
            <property name="enabled">
             <bool>false</bool>
@@ -518,34 +343,6 @@
            </property>
            <property name="text">
             <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QLabel" name="lTotalTallies4">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QLabel" name="lTotalTallies3">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QLabel" name="lCurrentTallies3">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QLabel" name="lCurrentTallies4">
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -568,7 +365,7 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="10">
+         <item row="5" column="9">
           <widget class="QPushButton" name="btMember20">
            <property name="enabled">
             <bool>false</bool>
@@ -587,7 +384,7 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="10">
+         <item row="6" column="9">
           <widget class="QPushButton" name="btMember21">
            <property name="enabled">
             <bool>false</bool>
@@ -606,7 +403,7 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="10">
+         <item row="4" column="9">
           <widget class="QPushButton" name="btMember19">
            <property name="enabled">
             <bool>false</bool>
@@ -625,21 +422,7 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="8">
-          <widget class="QLabel" name="lTotalTallies8">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="9">
-          <widget class="QLabel" name="lCurrentTallies9">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="6">
+         <item row="2" column="5">
           <widget class="QPushButton" name="btMember10">
            <property name="enabled">
             <bool>false</bool>
@@ -658,7 +441,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="6">
+         <item row="3" column="5">
           <widget class="QPushButton" name="btMember11">
            <property name="enabled">
             <bool>false</bool>
@@ -677,28 +460,7 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="9">
-          <widget class="QLabel" name="lCurrentTallies14">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="8">
-          <widget class="QLabel" name="lTotalTallies14">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QLabel" name="lCurrentTallies2">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="6">
+         <item row="4" column="5">
           <widget class="QPushButton" name="btMember12">
            <property name="enabled">
             <bool>false</bool>
@@ -717,71 +479,43 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="13">
-          <widget class="QLabel" name="lCurrentTallies15">
-           <property name="text">
-            <string>0</string>
+         <item row="2" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
           </widget>
          </item>
-         <item row="5" column="12">
-          <widget class="QLabel" name="lTotalTallies20">
-           <property name="text">
-            <string>0</string>
+         <item row="4" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
           </widget>
          </item>
-         <item row="5" column="13">
-          <widget class="QLabel" name="lCurrentTallies20">
-           <property name="text">
-            <string>0</string>
+         <item row="0" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
           </widget>
          </item>
-         <item row="3" column="13">
-          <widget class="QLabel" name="lCurrentTallies18">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="12">
-          <widget class="QLabel" name="lTotalTallies21">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="13">
-          <widget class="QLabel" name="lCurrentTallies21">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Minimum</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="11">
+         <item row="0" column="12">
           <spacer name="horizontalSpacer_3">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Minimum</enum>
+            <enum>QSizePolicy::Maximum</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -790,6 +524,398 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies8">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies10">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies10">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies11">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies11">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies12">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="6">
+          <widget class="QLCDNumber" name="lTotalTallies14">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLCDNumber" name="lCurrentTallies2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="8">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Maximum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies8">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLCDNumber" name="lTotalTallies1">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="7">
+          <widget class="QLCDNumber" name="lCurrentTallies14">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Maximum</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies16">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies16">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies17">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies17">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies18">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies18">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies19">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies19">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies20">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies20">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="10">
+          <widget class="QLCDNumber" name="lTotalTallies21">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="11">
+          <widget class="QLCDNumber" name="lCurrentTallies21">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>

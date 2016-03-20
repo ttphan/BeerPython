@@ -8,9 +8,10 @@ from db import sessionScope
 import view.gen.resources_rc
 from datetime import datetime
 
+MAX_ROOMS = 21
+
 class MainWindow(QMainWindow, Ui_MainWindow):
 
-    MAX_ROOMS = 21
     rooms = {}
 
     def __init__(self):
@@ -75,21 +76,43 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
     def refresh(self):
         with sessionScope() as session:
-            members = session.query(Member).filter(Member.room != None)
             tallies = []
 
-            for member in members:
-                id = member.room.id
-                totalTallies = member.getTotalTallies(session)
-                tallies.append([id, totalTallies])
+            for i in range(1, MAX_ROOMS + 1):
+                roomProps = self.rooms[i]
+                room = session.query(Room).get(i)
+                member = room.member
 
-                self.rooms[id][0].setText(member.name)
-                self.rooms[id][0].setStyleSheet('border: 1px solid #4A4949;')
-                self.rooms[id][0].setEnabled(True)
-                self.rooms[id][1].setText(str(totalTallies))
-                self.rooms[id][2].setText('0')
-                self.rooms[id][2].setStyleSheet("color: white; font-size: 9pt;")
+                if member:
+                    totalTallies = member.getTotalTallies(session)
+                    tallies.append([i, totalTallies])
 
+                    roomProps[0].setText(member.name)
+                    font = roomProps[0].font()
+                    font.setPointSize(12)
+                    roomProps[0].setFont(font)
+                    roomProps[0].setStyleSheet('border: 1px solid #4A4949;')
+                    roomProps[0].setEnabled(True)
+
+                    roomProps[1].display(totalTallies)
+                    roomProps[1].setEnabled(True)
+
+
+                    roomProps[2].setEnabled(True)
+                else:
+                    roomProps[0].setText('')
+                    roomProps[0].setEnabled(False)
+
+                    roomProps[1].display('-')
+                    roomProps[1].setEnabled(False)
+
+                    roomProps[2].setEnabled(False)
+
+
+                roomProps[1].setStyleSheet('border: 0px;')
+                roomProps[2].display('-')
+                roomProps[2].setStyleSheet("color: white;")
+                roomProps[2].setStyleSheet('border: 0px;')
 
             # Rank the top 3 members
             rankColour = ['gold', 'silver', '#693316']
@@ -111,9 +134,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
 
     def addTally(self, id):
-        oldValue = int(self.rooms[id][2].text())
-        self.rooms[id][2].setText(str(oldValue + 1))
-        self.rooms[id][2].setStyleSheet("color: green; font-size: 18pt;")
+        oldValue = self.rooms[id][2].value()
+        self.rooms[id][2].display(oldValue + 1)
+        self.rooms[id][2].setStyleSheet("color: green; border: 0px")
 
 
     def confirmTallies(self):
@@ -121,7 +144,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for key, value in self.rooms.items():
                 member = session.query(Room).get(key).member
                 totalTallies = value[1]
-                currentTallies = int(value[2].text())
+                currentTallies = int(value[2].value())
 
                 if currentTallies > 0:
                     time = datetime.now().strftime('%H:%M:%S')
