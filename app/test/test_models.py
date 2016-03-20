@@ -61,19 +61,19 @@ class TestTally:
         db_session.commit()
 
         # Add tally
-        Tally(testMember1, db_session)
+        testMember1.addTally(db_session)
 
-        assert len(testMember1.tallies) == 1 
-        assert len(testMember2.tallies) == 0
+        assert testMember1.getTotalTallies(db_session) == 1
+        assert testMember2.getTotalTallies(db_session) == 0
         assert db_session.query(Tally).count() == 1
         assert db_session.query(Tally).get(1).listId == 1
 
         # Add some more
-        Tally(testMember1, db_session)
-        Tally(testMember2, db_session)
+        testMember1.addTally(db_session)
+        testMember2.addTally(db_session)
 
-        assert len(testMember1.tallies) == 2
-        assert len(testMember2.tallies) == 1
+        assert testMember1.getTotalTallies(db_session) == 2
+        assert testMember2.getTotalTallies(db_session) == 1
         assert db_session.query(Tally).count() == 3
 
     def test_add_different_tally_types(self, db_session):
@@ -86,22 +86,22 @@ class TestTally:
         assert db_session.query(TallyType).count() == 2
 
         # Tally beer (default is beer)
-        Tally(testMember, db_session)
+        testMember.addTally(db_session)
         db_session.commit()
 
         assert db_session.query(Tally).get(1).tallyType.label == 'Beer'
 
         # Tally cola and beer
-        Tally(testMember, db_session, 'Cola')
-        Tally(testMember, db_session)
+        testMember.addTally(db_session, 1, 'Cola')
+        testMember.addTally(db_session)
         db_session.commit()
 
         assert db_session.query(Tally).get(2).tallyType.label == 'Cola'
         assert db_session.query(Tally).get(1).tallyType.label == 'Beer'
 
         # Raise IntegrityError, non-existant tally type
-        Tally(testMember, db_session, 'Chips')
-        
+        testMember.addTally(db_session, 1, 'Chips')
+
         with pytest.raises(IntegrityError):
             db_session.commit()
 
@@ -109,7 +109,7 @@ class TestTally:
 
 class TestList:
     def test_tally_list_dependency_exception(self, db_session):
-        db_session.add(Tally(Member(name = 'foo'), db_session))
+        Member(name = 'foo').addTally(db_session)
 
         with pytest.raises(IntegrityError):
             db_session.commit()
@@ -126,8 +126,7 @@ class TestList:
         assert db_session.query(List).count() == 1
 
         # Add tallies to newest list
-        Tally(testMember, db_session)
-        Tally(testMember, db_session)
+        testMember.addTally(db_session, 2)
 
         assert len(db_session.query(List).get(1).tallies) == 2
 
@@ -137,12 +136,10 @@ class TestList:
         db_session.commit()
         assert db_session.query(List).count() == 2
 
-        Tally(testMember, db_session)        
-        Tally(testMember, db_session)
-        Tally(testMember, db_session)
+        testMember.addTally(db_session, 3)
 
-        assert len(db_session.query(List).get(1).tallies) == 2
-        assert len(db_session.query(List).get(2).tallies) == 3
+        assert testMember.getTotalTallies(db_session, 1) == 2
+        assert testMember.getTotalTallies(db_session) == 3
 
 class TestRoom:
     def test_member_room(self, db_session):
@@ -165,12 +162,15 @@ class TestRoom:
         assert testMember1.room == None
         assert testMember2.room == None
 
+        assert db_session.query(Member).filter(Member.room != None).count() == 0
+
         # Populate the rooms
         testRoom1.member = testMember1
         testMember2.room = testRoom3
 
         assert testRoom1.member == testMember1
         assert testRoom3.member == testMember2
+        assert db_session.query(Member).filter(Member.room != None).count() == 2
 
         # One of the members moves to a different room
         testMember1.room = testRoom2
@@ -183,3 +183,4 @@ class TestRoom:
 
         assert testMember2.room == None
         assert testRoom3.member == None
+        assert db_session.query(Member).filter(Member.room != None).count() == 1

@@ -12,11 +12,18 @@ if [ -z "$SCRIPT_PATH" ] ; then
 fi
 echo "$SCRIPT_PATH"
 
-for file in $SCRIPT_PATH/../app/view/gen/qt/*; do
+for file in $SCRIPT_PATH/../app/view/gen/qt/*.ui; do
     filename=${file##*/}
     filename=${filename%.ui}
     echo "Converting $filename.ui to $filename.py..."
     pyside-uic $file -o $SCRIPT_PATH/../app/view/gen/$filename".py"
+done
+
+for file in $SCRIPT_PATH/../app/view/gen/qt/*.qrc; do
+    filename=${file##*/}
+    filename=${filename%.qrc}
+    echo "Converting $filename.qrc to $filename""_rc.py..."
+    pyside-rcc $file -o $SCRIPT_PATH/../app/view/gen/$filename"_rc.py" -py3
 done
 
 echo "Done!"

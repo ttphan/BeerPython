@@ -757,10 +757,15 @@
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background: url(:/img/huislogo.jpg) no-repeat center center fixed;
+background-color: white;
+</string>
+           </property>
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btConfirm">
+          <widget class="QPushButton" name="btConfirmTallies">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -792,7 +797,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="btCancel">
+          <widget class="QPushButton" name="btCancelTallies">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
              <horstretch>0</horstretch>

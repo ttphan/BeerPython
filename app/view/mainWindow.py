@@ -2,6 +2,9 @@ from PySide import QtCore, QtGui
 from PySide.QtCore import *
 from PySide.QtGui import *
 from view.gen.mainView import Ui_MainWindow 
+from model.model import *
+from db import sessionScope
+import view.gen.resources_rc
 
 class MainWindow(QMainWindow, Ui_MainWindow):
 
@@ -38,10 +41,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btMember20.clicked.connect(lambda: self.addTally(20))
         self.btMember21.clicked.connect(lambda: self.addTally(21))
 
-
-    def addTally(self, id):
-        oldValue = int(self.rooms[id][2].text())
-        self.rooms[id][2].setText(str(oldValue + 1))
+        self.btConfirmTallies.clicked.connect(self.confirmTallies)
+        self.btCancelTallies.clicked.connect(self.refresh)
 
 
     def initializeValues(self):
@@ -66,3 +67,34 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.rooms[19] = [self.btMember19, self.lTotalTallies19, self.lCurrentTallies19]
         self.rooms[20] = [self.btMember20, self.lTotalTallies20, self.lCurrentTallies20]
         self.rooms[21] = [self.btMember21, self.lTotalTallies21, self.lCurrentTallies21]
+
+        self.refresh()
+        
+    def refresh(self):
+        with sessionScope() as session:
+            members = session.query(Member).filter(Member.room != None)
+            for member in members:
+                id = member.room.id
+                totalTallies = member.getTotalTallies(session)
+
+                self.rooms[id][0].setText(member.name)
+                self.rooms[id][1].setText(str(totalTallies))
+                self.rooms[id][2].setText('0')
+
+
+    def addTally(self, id):
+        oldValue = int(self.rooms[id][2].text())
+        self.rooms[id][2].setText(str(oldValue + 1))
+
+
+    def confirmTallies(self):
+        with sessionScope() as session:
+            for key, value in self.rooms.items():
+                member = session.query(Room).get(key).member
+                totalTallies = value[1]
+                currentTallies = int(value[2].text())
+
+                if currentTallies > 0:
+                    member.addTally(session, currentTallies)
+
+        self.refresh()

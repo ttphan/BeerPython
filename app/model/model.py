@@ -91,3 +91,20 @@ class Member(Base):
 
     def __init__(self, name):
         self.name = name
+
+    def getTotalTallies(self, session, listId = None):
+        if listId == None:
+            listId = session.query(List).order_by(desc(List.id)).first().id
+
+        return (
+            session.query(Tally, Member, List)
+            .join(Member)
+            .join(List)
+            .filter(Member.id == self.id)
+            .filter(List.id == listId)
+            .count()
+        )
+
+    def addTally(self, session, amount = 1, tallyType = None):
+        for _ in range(amount):
+            session.add(Tally(self, session, tallyType))
