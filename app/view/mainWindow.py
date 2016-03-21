@@ -72,6 +72,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.rooms[20] = [self.btMember20, self.lTotalTallies20, self.lCurrentTallies20]
         self.rooms[21] = [self.btMember21, self.lTotalTallies21, self.lCurrentTallies21]
 
+        self.fLeft.setStyleSheet('border: 0px')
+
         self.refresh()
         
     def refresh(self):
@@ -83,6 +85,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 room = session.query(Room).get(i)
                 member = room.member
 
+                roomProps[0].setStyleSheet('border: 0px')
+                roomProps[1].setStyleSheet('border: 0px;')
+
+                roomProps[2].display('-')
+                roomProps[2].setStyleSheet('border: 0px;')
+                
                 if member:
                     totalTallies = member.getTotalTallies(session)
                     tallies.append([i, totalTallies])
@@ -109,10 +117,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     roomProps[2].setEnabled(False)
 
 
-                roomProps[1].setStyleSheet('border: 0px;')
-                roomProps[2].display('-')
-                roomProps[2].setStyleSheet("color: white;")
-                roomProps[2].setStyleSheet('border: 0px;')
 
             # Rank the top 3 members
             rankColour = ['gold', 'silver', '#693316']
@@ -149,8 +153,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 if currentTallies > 0:
                     time = datetime.now().strftime('%H:%M:%S')
                     member.addTally(session, currentTallies)
-                    self.tLog.append(time + " - " + member.name + " heeft " 
-                        + str(currentTallies) + " biertje(s) geturfd.")
+                    self.tLog.append('{} - {} heeft {} biertje(s) geturfd.'
+                        .format(time, member.name, currentTallies))
                     if currentTallies == 7:
                         self.tLog.append("Waarvoor hulde!")
                     
