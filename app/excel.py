@@ -2,7 +2,7 @@ from openpyxl import Workbook
 from datetime import date
 
 
-def writeToExcel(members, listNr):
+def writeToExcel(members, l):
 	wb = Workbook()
 
 	ws = wb.active
@@ -12,9 +12,9 @@ def writeToExcel(members, listNr):
 	for member in members:
 		ws.append([member[0], member[1]])
 
-	filename = str(listNr) + '-'
-	filename += date.today().isoformat()
-	filename += '.xlsx'
+	listDate = l.date.date().isoformat()
+
+	filename = '{}-{}.xlsx'.format(l.id, listDate)
 
 	wb.save('../data/sheets/' + filename)
 

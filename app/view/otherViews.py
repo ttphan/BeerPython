@@ -99,16 +99,16 @@ class MenuView(QDialog, Ui_MenuDialog):
 
         if ret == QMessageBox.Yes:
 
-            listId = self.session.query(List).order_by(desc(List.id)).first().id
+            l = self.session.query(List).order_by(desc(List.id)).first()
             members = (self.session.query(
                 Member.name, func.count(Member.id))
                 .join(Tally)
                 .join(List)
-                .filter(List.id == listId)
+                .filter(List.id == l.id)
                 .group_by(Member)
             )
 
-            filename = writeToExcel(members, listId)
+            filename = writeToExcel(members, l)
 
             self.session.add(List())
             self.session.commit()
