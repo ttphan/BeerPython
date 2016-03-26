@@ -69,8 +69,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -88,8 +88,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -107,8 +107,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -126,8 +126,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -151,8 +151,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -170,8 +170,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -189,8 +189,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -214,8 +214,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -233,8 +233,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -252,8 +252,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -277,8 +277,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -296,8 +296,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -315,8 +315,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -334,8 +334,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -353,8 +353,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -372,8 +372,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -391,8 +391,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -410,8 +410,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -429,8 +429,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -448,8 +448,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -467,8 +467,8 @@
            </property>
            <property name="minimumSize">
             <size>
-             <width>100</width>
-             <height>100</height>
+             <width>75</width>
+             <height>75</height>
             </size>
            </property>
            <property name="focusPolicy">
@@ -940,8 +940,13 @@
            <property name="sizePolicy">
             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
              <horstretch>0</horstretch>
-             <verstretch>4</verstretch>
+             <verstretch>2</verstretch>
             </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+            </font>
            </property>
            <property name="focusPolicy">
             <enum>Qt::NoFocus</enum>
@@ -950,8 +955,7 @@
             <string notr="true">background: url(:/img/huislogo.jpg) no-repeat center center;
 background-attachment: fixed;
 background-color: white;
-color: red;
-font-size: 14pt;</string>
+color: red;</string>
            </property>
           </widget>
          </item>

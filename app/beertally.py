@@ -24,10 +24,14 @@ class BeerTally(QtGui.QApplication):
         self.mainWindow = MainWindow()
         
         if os.name == 'nt':
-            # This is needed to display the app icon on the taskbar on Windows 7
-            import ctypes
-            myappid = 'JvB.7' # arbitrary string
-            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+	        import ctypes
+	        myappid = 'JvB.7' # arbitrary string
+	        try:
+	            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+	        except AttributeError:
+	            # That function doesn't exist on Windows XP
+	            pass
+
 
 if __name__ == '__main__':
     # Enable ctrl-c closeable
